@@ -1,3 +1,6 @@
+-- Person Table -------------------------------------------
+
+
 -- CREATE TABLE person (
 --   id SERIAL PRIMARY KEY,
 --   name VARCHAR(40),
@@ -6,7 +9,6 @@
 --   city VARCHAR(115),
 --   favorite_color VARCHAR(30)
 --   );
-
 
 -- INSERT INTO person
 -- (name, favorite_color, city, height, age)
@@ -56,5 +58,36 @@
 -- WHERE favorite_color 
 -- in ('yellow', 'purple'); 
 
+----------------------------------------------------------------
 
 
+
+-- Order Table
+
+-- CREATE TABLE orders (
+--   order_id SERIAL PRIMARY KEY,
+--   person_id INTEGER,
+--   product_name VARCHAR(100),
+--   product_price numeric,
+--   quantity integer
+--   )
+
+-- INSERT INTO orders 
+-- (person_id, product_name, quantity, product_price)
+-- VALUES
+-- (1, 'chips', 4, 2.50),
+-- (2, 'broccoli', 5, 4.00),
+-- (3, 'Steak', 1, 15.00),
+-- (4, 'Macarroni', 3, 2.50),
+-- (1, 'Water', 4, 5.50);
+
+-- SELECT * FROM orders;
+-- SELECT SUM(quantity) FROM orders;
+
+-- order total per row
+-- SELECT product_price*quantity AS order_total 
+-- FROM orders;
+
+-- sum of all order totals 
+-- SELECT SUM(product_price*quantity) AS order_total 
+-- FROM orders;
