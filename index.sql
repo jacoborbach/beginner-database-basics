@@ -127,3 +127,22 @@ WHERE name LIKE '%Black%';
 
 
 ------------------------------------------------------------------
+
+-- employee
+
+SELECT first_name, last_name, city FROM EMPLOYEE
+WHERE city = 'Calgary'
+
+SELECT * FROM EMPLOYEE
+ORDER BY birth_date ASC
+LIMIT 1
+
+SELECT * FROM EMPLOYEE
+ORDER BY birth_date DESC
+LIMIT 1
+
+SELECT * FROM employee 
+WHERE reports_to = 2
+
+SELECT COUNT(*) FROM EMPLOYEE
+WHERE city = 'Lethbridge'
