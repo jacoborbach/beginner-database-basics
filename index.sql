@@ -146,3 +146,30 @@ WHERE reports_to = 2
 
 SELECT COUNT(*) FROM EMPLOYEE
 WHERE city = 'Lethbridge'
+
+
+------------------------------------------------------------------
+
+-- Invoice
+
+SELECT COUNT(*) FROM invoice
+where billing_country = 'USA'
+
+SELECT MAX(total) FROM invoice
+SELECT MIN(total) FROM invoice
+
+SELECT total FROM invoice
+WHERE total > 5
+
+SELECT * FROM invoice
+WHERE total > 5
+
+SELECT COUNT(*) FROM invoice
+WHERE total < 5
+
+SELECT COUNT(*) FROM invoice
+WHERE billing_state in ('CA', 'TX', 'AZ')
+
+SELECT AVG(total) from invoice
+SELECT SUM(total) from invoice
+
